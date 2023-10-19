@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -f $1/bun.lockb ]; then
-  echo "Bun app detected"
+  echo "Bun"
   exit 0
 else
   exit 1

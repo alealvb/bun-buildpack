@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 
-echo "Bun app is ready to run"
-exec bun run -b start -p \$PORT
+cat << EOF
+---
+addons:
+  []
+default_process_types:
+  web: bun run -b start -p \$PORT
+EOF
